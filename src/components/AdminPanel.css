@@ -1,0 +1,136 @@
+/* ----- Giao diện chung ----- */
+body {
+    background: #181818;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* ----- Phần quản lý ----- */
+.admin-panel {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Tiêu đề */
+.admin-panel h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* ----- Form nhập liệu ----- */
+.admin-panel input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #2A2A2A;
+    color: #ffffff;
+}
+
+/* Khi nhập vào input */
+.admin-panel input:focus {
+    border-color: #00C853;
+    outline: none;
+}
+
+/* Input file */
+.admin-panel input[type="file"] {
+    border: none;
+}
+
+/* Nút bấm */
+.admin-panel button {
+    background: #00C853;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+/* Hover nút */
+.admin-panel button:hover {
+    background: #00E676;
+}
+
+/* Nút hủy */
+.admin-panel .cancel-btn {
+    background: #FF3D00;
+}
+
+.admin-panel .cancel-btn:hover {
+    background: #FF6D00;
+}
+
+/* ----- Danh sách phim ----- */
+.movie-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Thẻ phim */
+.movie-list li {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover vào thẻ phim */
+.movie-list li:hover {
+    transform: translateY(-3px);
+    background: #333;
+}
+
+/* Ảnh phim */
+.movie-list img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Nút Sửa */
+.movie-list .edit-btn {
+    background: #00C853;
+}
+
+.movie-list .edit-btn:hover {
+    background: #00E676;
+}
+
+/* Nút Xóa */
+.movie-list .delete-btn {
+    background: #FF3D00;
+}
+
+.movie-list .delete-btn:hover {
+    background: #FF6D00;
+}
+.admin-panel label,
+.admin-panel p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.admin-panel input[type="file"] {
+  margin-bottom: 10px;
+}
