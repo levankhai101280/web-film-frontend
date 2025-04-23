@@ -88,9 +88,15 @@ const MovieDetail = () => {
 
   // Hàm xử lý nhấn vào "Xem phim"
   const handlePlayVideo = () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert("Bạn cần đăng nhập để xem phim.");
+      return;
+    }
+  
     setIsVideoLoading(true);
     setTimeout(() => {
-      setIsVideoVisible(true); // Sau 2 giây, hiển thị video
+      setIsVideoVisible(true); // Hiển thị video
       setIsVideoLoading(false); // Tắt loading
     }, 2000);
   };

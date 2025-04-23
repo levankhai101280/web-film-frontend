@@ -1,103 +1,62 @@
-/* ----- Thanh điều hướng ----- */
+/* Header.css */
+
 header {
-    background: #222;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #1f1f1f;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* ----- Navigation Bar ----- */
 nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* ----- Các liên kết ----- */
 nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-/* Hover vào liên kết */
 nav a:hover {
-    background: #00E676;
-    color: #181818;
+  color: #00bcd4;
 }
 
-/* Khi trang đang active */
-nav a.active {
-    background: #00C853;
-    color: #181818;
-}
-
-/* ----- Phần User Info ----- */
 nav span {
-    color: #ffffff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  color: #fff;
+  font-size: 16px;
 }
 
-/* Nút đăng xuất */
-nav span button {
-    background: #FF3D00;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+nav button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
-/* Hover vào nút đăng xuất */
-nav span button:hover {
-    background: #FF6D00;
+nav button:hover {
+  background-color: #ff1744;
 }
 
-/* ----- Ô tìm kiếm ----- */
-nav form {
-    display: flex;
-    align-items: center;
-    background: #333;
-    border-radius: 5px;
-    padding: 5px;
-    float: right;
-}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-nav form input {
-    background: transparent;
-    border: none;
-    color: white;
-    padding: 8px;
-    outline: none;
-    width: 200px;
-}
-
-nav form input::placeholder {
-    color: #bbb;
-}
-
-nav form button {
-    background: #00E676;
-    border: none;
-    padding: 8px 10px;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-nav form button:hover {
-    background: #00C853;
+  nav a, nav span {
+    margin: 8px 0;
+  }
 }

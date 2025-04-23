@@ -33,16 +33,7 @@ const Header = ({ userRole, username, onLogout, onSearch }) => {
             Chào, {username}! <button onClick={onLogout}>Đăng xuất</button>
           </span>
         )}
-        {/* Form tìm kiếm */}
-        <form onSubmit={handleSearch} style={{ display: 'inline-block', marginLeft: '20px' }}>
-          <input
-            type="text"
-            placeholder="Tìm phim..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button type="submit">🔍</button>
-        </form>
+
       </nav>
     </header>
   );

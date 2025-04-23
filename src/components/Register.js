@@ -7,21 +7,36 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
-    });
 
-    const data = await response.json();
-    console.log('Phản hồi từ server:', data);
+    // ✅ Kiểm tra dữ liệu đầu vào
+    if (!username.trim()) {
+      alert('Vui lòng nhập tên người dùng');
+      return;
+    }
+    if (!password.trim()) {
+      alert('Vui lòng nhập mật khẩu');
+      return;
+    }
 
-    if (response.ok) {
-      alert('Đăng ký thành công, hãy đăng nhập!');
-      setUsername('');
-      setPassword('');
-    } else {
-      alert(data.message || 'Đăng ký thất bại');
+    try {
+      const response = await fetch('http://localhost:5000/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+
+      const data = await response.json();
+      console.log('Phản hồi từ server:', data);
+
+      if (response.ok) {
+        alert('Đăng ký thành công, hãy đăng nhập!');
+        setUsername('');
+        setPassword('');
+      } else {
+        alert(data.message || 'Đăng ký thất bại');
+      }
+    } catch (err) {
+      alert('Lỗi kết nối đến server');
     }
   };
 
